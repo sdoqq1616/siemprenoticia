@@ -1,0 +1,62 @@
+
+
+.list-circle li{
+    margin-left: 30px;
+    list-style: circle;
+}
+
+.code{
+    border-radius: 5px;
+    padding: 5px 10px;
+    color:#fff;
+    background-color: black;
+}
+
+
+.list li{
+    list-style: disc;
+}
+
+.code p:nth-of-type(2n){
+    margin-left: 20px;
+}
+.box p{
+    margin:0;
+}
+
+.box strong{
+    margin-left: 20px;
+}
+
+b{
+    font-size: 20px;
+}
+
+.Ejercicio p:nth-child(2),
+.Ejercicio p:nth-child(3){
+    margin:0;
+}
+
+.ejemplo p{
+    margin:0;
+}
+
+#download{
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    text-decoration: underline;
+}
+
+#download::before{
+    content:'';
+    display: block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 25px;
+    height: 25px;
+    background-color: pink;
+    background: url(../images/text.svg) 0 0;
+    background-size: 25px 25px;
+}

@@ -1,0 +1,21 @@
+
+
+
+.content li{
+    list-style: disc;
+    margin-bottom: 30px;
+}
+
+.list-circle li{
+    margin-left: 30px;
+    list-style: circle;
+}
+
+.box{
+    
+    color:#fff;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: black;
+}
+

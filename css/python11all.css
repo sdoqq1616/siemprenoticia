@@ -1,0 +1,72 @@
+
+
+.list-circle li{
+    margin-left: 30px;
+    list-style: circle;
+}
+
+.code{
+    border-radius: 5px;
+    padding: 10px 10px 5px;
+    color:#fff;
+    background-color: black;
+}
+
+
+.list li{
+    list-style: disc;
+    margin-left: 40px;
+}
+
+.list li p{
+    margin: 0;
+}
+
+
+.box p{
+    margin:0;
+}
+
+.box strong{
+    margin-left: 20px;
+}
+
+b{
+    font-size: 20px;
+}
+
+
+.muestra p:nth-child(2),
+.muestra p:nth-child(3),
+.muestra p:nth-child(4){
+    margin-left: 20px;
+}
+
+.code i{
+    color:#f5b800;
+}
+
+.picture{
+    text-align: center;
+}
+
+
+#download{
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    text-decoration: underline;
+}
+
+#download::before{
+    content:'';
+    display: block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 25px;
+    height: 25px;
+    background-color: pink;
+    background: url(../images/spreadsheet.svg) 0 0;
+    background-size: 25px 25px;
+}

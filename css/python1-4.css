@@ -1,0 +1,20 @@
+
+.code{
+    color:#fff;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+
+.nota{
+    margin: 20px 0;
+    font-size: 18px;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #ffcf35;
+}

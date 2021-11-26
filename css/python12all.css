@@ -1,0 +1,60 @@
+
+
+.list-circle li{
+    margin-left: 30px;
+    list-style: circle;
+}
+
+.code{
+    border-radius: 5px;
+    padding: 10px 10px 5px;
+    color:#fff;
+    background-color: black;
+}
+
+
+.list li{
+    list-style: disc;
+}
+
+
+
+
+
+.box p{
+    margin:0;
+}
+
+.box strong{
+    margin-left: 20px;
+}
+
+b{
+    font-size: 20px;
+}
+
+
+.muestra p:nth-child(2),
+.muestra p:nth-child(3),
+.muestra p:nth-child(4){
+    margin-left: 20px;
+}
+
+.code i{
+    color:#f5b800;
+}
+
+.nota{
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #ffcf35;
+}
+
+.desafio12{
+    text-align: center ;
+    
+}
+
+.desafio12 p{
+    margin-bottom: 40px;
+}

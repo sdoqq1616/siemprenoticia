@@ -1,0 +1,15 @@
+
+.content p{
+    font-size: 16px;
+}
+
+.content .Dato-divertido{
+    font-size: 18px;
+    color:black;
+    font-weight: 700;
+    background-color: red;
+}
+
+.content .text{
+    border-bottom: 1px solid #eee;
+}

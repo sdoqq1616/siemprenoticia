@@ -1,0 +1,45 @@
+
+
+.content b{
+    font-size: 30px;
+}
+
+.pic img{
+    margin-top: 20px;
+}
+
+.nota{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffcf35;
+}
+
+
+.content li{
+    list-style: disc;
+    margin-left: 20px;
+}
+
+
+.box{
+    padding: 0 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border:3px solid #2b60ae;
+}
+.box:nth-child(1){
+    margin-right: 10px;
+}
+
+.box i{
+    color:red;
+}
+
+.code{
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: #fff;
+    background-color: black;
+}

@@ -1,0 +1,21 @@
+
+.content .pic img{
+    width: 100%;
+}
+
+.code{
+    border-radius: 5px;
+    padding: 5px 10px;
+    color:#fff;
+    background-color: black;
+}
+
+.code p:nth-child(2){
+    margin-left: 20px;
+}
+
+.nota{
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #ffcf35;
+}

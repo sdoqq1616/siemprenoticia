@@ -1,0 +1,26 @@
+
+
+.content p{
+    font-size: 18px;
+}
+
+.pic{
+    padding: 5px;
+    border-radius: 10px;
+    border:2px solid #fad604;
+}
+
+.nota{
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #fad604;
+}
+
+.nota p:nth-child(n+2){
+    font-size: 16px;
+}
+
+.next{
+    margin-bottom: 100px;
+}
