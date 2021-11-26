@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEMPRE NOTICIA</title>
+    <meta name="keywords"
+        content="SIEMPRE NOTICIA,python,Python,tutorial,clase de programacion,estudiar online,recursos de programacion,aprender">
+    <meta name="description"
+        content="Siempre noticia,clases de python,clases de programacion,clase gratuito,en 12 clases aprendes de programar en python,aprende virtual,aprende online,programacion,PROGRAMACION,Programacion,mejor tutorial de python,python tutorial en espanol">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/tecno.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- parte 1 -->
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="" class="hidden-xs">
+                        <span class="visible-xs">SIEMPRE NOTICIA</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="clasesvirtuales.html" class="glyphicon glyphicon-fire">
+                                Clases</a></li>
+                        <li><a href="politica.html" class="glyphicon glyphicon-hand-up">
+                                Política</a></li>
+                        <li><a href="sociedad.html" class="glyphicon glyphicon-pawn"> Sociedad</a>
+                        </li>
+                        <li><a href="economia.html" class="glyphicon glyphicon-globe"> Economía</a>
+                        </li>
+                        <li><a href="tecno.html" class="glyphicon glyphicon-wrench"> Tecno</a></li>
+                    </ul>
+                </div>
+                <script>
+                    window.addEventListener('load', function () {
+                        var nav = document.querySelector('.nav');
+                        var lis = nav.children[0].children;
+
+                        var arry = ['glyphicon glyphicon-fire', 'glyphicon glyphicon-hand-up', 'glyphicon glyphicon-pawn', 'glyphicon glyphicon-globe', 'glyphicon glyphicon-wrench'];
+                        window.addEventListener('resize', function () {
+
+                            if (window.innerWidth < 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = '';
+                                }
+                            }
+                            if (window.innerWidth > 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = arry[i];
+
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <div class="time">
+                    <span class="hour">12</span>
+                    <span class="minute">25</span>
+                    <span class="second">33</span>
+                    <span class="frase">Si si, el timepo vale oro!!!!!</span>
+                </div>
+                <a href="javascript:;" class="public-coto hidden-xs hidden-sm hidden-md"><img src="./images/coto.gif"
+                        alt=""></a>
+                <script>
+                    var hour = document.querySelector('.hour');
+                    var minute = document.querySelector('.minute');
+                    var second = document.querySelector('.second');
+                    var frase = document.querySelector('.frase');
+                    var time = hour.parentNode;
+                    time.addEventListener('mouseover', function () {
+                        frase.style.display = 'block';
+                    });
+                    time.addEventListener('mouseout', function () {
+                        frase.style.display = 'none';
+                    });
+                    getTime();
+                    setInterval(getTime, 1000);
+                    function getTime() {
+                        var times = new Date();
+                        var h = times.getHours();
+                        h = h >= 10 ? h : '0' + h;
+                        var m = times.getMinutes();
+                        m = m >= 10 ? m : '0' + m;
+                        var s = times.getSeconds();
+                        s = s >= 10 ? s : '0' + s;
+                        hour.innerHTML = h;
+                        minute.innerHTML = m;
+                        second.innerHTML = s;
+                    }
+                </script>
+            </header>
+            <!-- parte 2 -->
+            <article class="col-md-7">
+                <div class="data-new">
+                    <h1>Prisma Medios de Pago y Naranja X sellaron una alianza para fomentar la inclusión financiera de
+                        comercios y emprendedores</h1>
+                    <h3>Ambas empresas destacaron que el acuerdo les permitirá ampliar sus propuestas de valor para más
+                        de 450.000 comercios</h3>
+                    <div class="publictime">
+                        9 de Noviembre de 2021
+                    </div>
+                    <hr>
+                    <img src="./upload/tecno.webp" alt="">
+                    <p class="index-1">
+                        Prisma Medios de Pago y Naranja X sellaron una alianza para fomentar la inclusión financiera.
+                        <strong>A
+                            través de este acuerdo, más de 150.000 comercios y emprendedores podrán aceptar como medios
+                            de
+                            pago a Naranja X y a las grandes marcas que opera Prisma Medios de Pago: Visa, Mastercard,
+                            American Express y Cabal en sus versiones débito, crédito y prepagas.</strong>
+                    </p><br>
+                    <p>“Hoy más que nunca resulta indispensable el desarrollo de productos que actúen como facilitadores
+                        para el comercio, que fomenten la inclusión financiera y los cobros seguros. Por eso celebramos
+                        este acuerdo con Prisma Medios de Pago, para que más comercios y emprendedores de todo el país
+                        puedan aceptar Naranja X como medio de pago, ampliando sus capacidades financieras y ofreciendo
+                        alternativas para sus clientes”, comentó Gustavo Fazzio, Chief Business Development Officer
+                        Merchants de Naranja X.</p>
+                    <div class="subtitle">
+                        “Esta alianza es muy importante porque nos permite continuar potenciando nuestra propuesta de
+                        valor a comercios y la experiencia de nuestros clientes con la oferta de aceptación de medios de
+                        pago más completa del mercado” (Flaherty)
+
+                    </div>
+                    <p>“Estamos convencidos que Naranja X es un gran aliado para recorrer el camino de la inclusión
+                        financiera a lo largo del país, y esta alianza es muy importante porque nos permite continuar
+                        potenciando nuestra propuesta de valor a comercios y la experiencia de nuestros clientes con la
+                        oferta de aceptación de medios de pago más completa del mercado”, comentó Tomás Flaherty, Head
+                        of Strategic Alliances de Prisma Medios de Pago.</p><br>
+                    <p>Ambas empresas destacaron en un comunicado que la alianza les permitirá ampliar sus propuestas de
+                        valor “para más de 450.000 comercios de rubros como supermercados, almacenes, artículos del
+                        hogar, ferreterías, materiales de construcción, empresas de servicios, indumentaria y
+                        restaurantes”.</p><br>
+                    <p>“A partir de ahora, estos comercios podrán aceptar Naranja X y todas las marcas que opera Prisma
+                        Medios de Pago. Como diferencial, <strong>Naranja X habilitará planes y condiciones exclusivas
+                            para los
+                            primeros comercios que se adhieran, además de promociones y descuentos para los más de 5
+                            millones de clientes que usan la tarjeta de crédito de la compañía”</strong>, aseguraron.
+                    </p>
+
+                </div>
+            </article>
+
+            <!-- parte 3 -->
+            <aside class="col-md-3">
+                <div class="story">
+                    <p><span>Reliquias de la Muerte</span></p>
+                    <video src="./video/Reliquias de la muerte.mp4" autoplay="autoplay" controls="controls" loop="loop"
+                        muted="muted"></video>
+
+                    <p>Había una vez tres hermanos que viajaban por un camino sinuoso y solitario, al atardecer. De
+                        pronto los hermanos llegaron a un río demasiado traicionero para cruzarlo. Pero siendo diestros
+                        en el arte de la magia los tres hermanos solo usaron sus varitas para crear un puente. Sin
+                        embargo, antes de pasar, una figura encapuchada bloqueó su camino, era la muerte, y se sintió
+                        defraudada porque los viajeros normalmente se ahogaban en el río. Pero la muerte era astuta.
+                        Fingió felicitar a los tres hermanos por su magia y les dijo que se habían ganado un premio por
+                        ser lo bastante listos para evitarla. El mayor, pidió una varita más poderosa que cualquiera que
+                        existiera, y la muerte se la fabricó de un árbol de Sáuco que estaba cerca . El segundo hermano
+                        decidió que quería humillar a la muerte aún más, pidió el poder de traer a seres amados desde la
+                        tumba. Así la muerte tomo una piedra del río y se la entregó. Finalmente, la muerte giró hacia
+                        el tercer hermano, un hombre humilde. Él pidió algo que le permitiera irse de ese lugar evitando
+                        que la muerte lo siguiera, la muerte de mala gana, le dio su propio manto de invisibilidad.
+
+                        El primer hermano viajo a un poblado distante y con la varita de Sáuco en la mano mató a un mago
+                        con quien una vez había peleado. Ebrio con el poder que le había dado la varita, presumió ser
+                        invencible. Pero esa noche, otro mago le robó la varita y le cortó el cuello de lado a lado. Y
+                        la muerte reclamó al primer hermano.
+
+
+                        Mientras, el segundo hermano fue a su hogar donde tomó la piedra y la giró tres veces en su
+                        mano. Para su deleite, la mujer con la que había querido casarse antes de su repentina muerte,
+                        apareció frente a él, pero pronto se volvió triste y fría, pues ya no pertenecía al mundo de los
+                        mortales. Llevado a la locura por su tristeza, el segundo hermano se quitó la vida para estar
+                        con ella, y la muerte se llevó al segundo hermano.
+                        Al tercer hermano la muerte lo buscó por muchos años, pero nunca pudo encontrarlo, solo cuando
+                        llegó a una edad muy avanzada, el hermano más joven se quitó el manto de invisibilidad y se lo
+                        dio a su hijo. Recibió a la muerte como a una vieja amiga y fue con ella con gusto, dejando esta
+                        vida como iguales.
+
+                    </p>
+                </div>
+                <div class="hot">
+                    <a href="#">
+                        <span class="btn btn-warning">Hot en Busqueda</span>
+                        <h4 class="text-primary">Elecciones 2021: el PRO pidió más urnas y mesas de votación para los
+                            argentinos en el
+                            exterior.
+                        </h4>
+                        <p>El PRO, uno de los partidos que integra la alianza de Juntos por el Cambio, hizo hoy un
+                            pedido en
+                            la justicia electoral para que en las elecciones del próximo 14 de noviembre haya más urnas
+                            y
+                            mesas de votación en los consultados y embajadas donde votan los argentinos que residen en
+                            le
+                            exterior. Un planteo similar fue rechazado hace un mes pero ahora el PRO acercó propuestas
+                            para
+                            evitar las demoras que se registraron en las elecciones de 2019.
+
+                            Según la nota a la que accedió Infobae, creció el padrón respecto de las elecciones
+                            presidenciales de 2019 -los residentes en el exterior no votan en las PASO- pero no se
+                            incrementaron la cantidad de mesas ni las urnas disponibles, lo que puede hacer el proceso
+                            el
+                            día de los comicios se haga más lento y haya gente que desista de ir a votar. A eso suma que
+                            en
+                            esta elección se aplican protocolos sanitarios por la pandemia del coronavirus.</p>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <h2>By.Zhihao Guo Copyright © 2021 Todos los derechos reservados</h2>
+                    <div class="animation">
+                        <div class="bear"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEMPRE NOTICIA</title>
+    <meta name="keywords"
+        content="SIEMPRE NOTICIA,python,Python,tutorial,clase de programacion,estudiar online,recursos de programacion,aprender">
+    <meta name="description"
+        content="Siempre noticia,clases de python,clases de programacion,clase gratuito,en 12 clases aprendes de programar en python,aprende virtual,aprende online,programacion,PROGRAMACION,Programacion,mejor tutorial de python,python tutorial en espanol">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/python.css">
+    <link rel="stylesheet" href="./css/python9all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- parte 1 -->
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="" class="hidden-xs">
+                        <span class="visible-xs">SIEMPRE NOTICIA</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="clasesvirtuales.html" class="glyphicon glyphicon-fire">
+                                Clases</a></li>
+                        <li><a href="politica.html" class="glyphicon glyphicon-hand-up">
+                                Política</a></li>
+                        <li><a href="sociedad.html" class="glyphicon glyphicon-pawn"> Sociedad</a>
+                        </li>
+                        <li><a href="economia.html" class="glyphicon glyphicon-globe"> Economía</a>
+                        </li>
+                        <li><a href="tecno.html" class="glyphicon glyphicon-wrench"> Tecno</a></li>
+                    </ul>
+                </div>
+                <script>
+                    window.addEventListener('load', function () {
+                        var nav = document.querySelector('.nav');
+                        var lis = nav.children[0].children;
+
+                        var arry = ['glyphicon glyphicon-fire', 'glyphicon glyphicon-hand-up', 'glyphicon glyphicon-pawn', 'glyphicon glyphicon-globe', 'glyphicon glyphicon-wrench'];
+                        window.addEventListener('resize', function () {
+
+                            if (window.innerWidth < 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = '';
+                                }
+                            }
+                            if (window.innerWidth > 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = arry[i];
+
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <div class="time">
+                    <span class="hour">12</span>
+                    <span class="minute">25</span>
+                    <span class="second">33</span>
+                    <span class="frase">Si si, el timepo vale oro!!!!!</span>
+                </div>
+                <a href="javascript:;" class="public-coto hidden-xs hidden-sm hidden-md"><img src="./images/coto.gif"
+                        alt=""></a>
+                <script>
+                    var hour = document.querySelector('.hour');
+                    var minute = document.querySelector('.minute');
+                    var second = document.querySelector('.second');
+                    var frase = document.querySelector('.frase');
+                    var time = hour.parentNode;
+                    time.addEventListener('mouseover', function () {
+                        frase.style.display = 'block';
+                    });
+                    time.addEventListener('mouseout', function () {
+                        frase.style.display = 'none';
+                    });
+                    getTime();
+                    setInterval(getTime, 1000);
+                    function getTime() {
+                        var times = new Date();
+                        var h = times.getHours();
+                        h = h >= 10 ? h : '0' + h;
+                        var m = times.getMinutes();
+                        m = m >= 10 ? m : '0' + m;
+                        var s = times.getSeconds();
+                        s = s >= 10 ? s : '0' + s;
+                        hour.innerHTML = h;
+                        minute.innerHTML = m;
+                        second.innerHTML = s;
+                    }
+                </script>
+            </header>
+            <!-- parte 2 -->
+            <article class="col-md-7">
+                <div class="cursologo">
+                    <a href="clasesvirtuales.html"><img src="./images/APV_logo2.png" alt=""></a>
+                </div>
+                <ul class="row">
+                    <li><a href="python.html">1</a></li>
+                    <li><a href="python2.html">2</a></li>
+                    <li><a href="python3.html">3</a></li>
+                    <li><a href="python4.html">4</a></li>
+                    <li><a href="python5.html">5</a></li>
+                    <li><a href="python6.html">6</a></li>
+                    <li><a href="python7.html">7</a></li>
+                    <li><a href="python8.html">8</a></li>
+                    <li><a href="python9.html">9</a></li>
+                    <li><a href="python10.html">10</a></li>
+                    <li><a href="python11.html">11</a></li>
+                    <li><a href="python12.html">12</a></li>
+                </ul>
+
+                <div class="content">
+                    <h1>Clase #09</h1>
+                    <hr>
+                    <h1>Segmentos</h1>
+                    <br>
+                    <p>Cuando trabajamos con colecciones de datos como las <strong>listas</strong> y las
+                        <strong>tuplas</strong>, es muy común que necesitemos trabajar con una porción de sus elementos.
+                    </p>
+                    <br>
+                    <p>Estas porciones de elementos se llaman <strong>«segmentos»</strong>, y en la mayoría de los
+                        lenguajes de alto nivel resulta necesario programar algún bucle para extraerlos de la lista
+                        completa.</p>
+                    <br>
+                    <p>En Python los segmentos están muy simplificados, porque tienen una sintaxis fácil de leer.</p>
+                    <br>
+                    <p>Un segmento esta limitado por 2 indices separados por dos puntos, encerrados entre corchetes,
+                        donde el 2º indice, al igual que pasa en los rangos, no se incluye o no se alcanza.</p>
+                    <br>
+                    <p>Por ejemplo:</p>
+                    <div class="code">
+                        <p>
+                            lista = [10, 20, 30, 40, 50, 60, 70]
+                            <br><br>
+                            lista[0 : 1] --> resulta [10], porque el indice 1 no se incluye en el segmento <br>
+                            lista[2 : 5] --> resulta [30, 40, 50], porque el indice 5 no se incluye en el segmento
+                        </p>
+                    </div>
+                    <br>
+                    <p>Si omitimos alguno de los dos limites, se entiende que queremos usar un limite extremo:</p>
+                    <div class="code">
+                        <p>
+                            lista[: 3] --> resulta <strong>[10, 20, 30]</strong> porque es equivalente a lista[0 : 3]
+                            <br>
+                            lista[3 :] --> resulta <strong>[40, 50, 60, 70]</strong> porque es equivalente a lista[3 :
+                            7]
+                        </p>
+                    </div>
+                    <br>
+                    <p>Opcionalmente, los segmentos pueden incluir un 3º argumento que se interpreta como el
+                        <strong>«paso»</strong> o salto con el que se debe recorrer el segmento:
+                    </p>
+                    <div class="code">
+                        <p>lista[1 : 6 : 2] --> resulta <strong>[20, 40, 60]</strong> porque toma los indices 1, 3 y 5
+                            (salto o paso 2)</p>
+                    </div>
+                    <br>
+                    <p>Si el paso es negativo, el recorrido de los indices se hace en orden inverso:</p>
+                    <div class="code">
+                        <p>lista[5 : 0 : -2] --> resulta <strong>[60, 40, 20]</strong> porque toma los indices 5, 3 y 1
+                            (salto o paso -2)</p>
+                    </div>
+                    <br>
+                    <p>Un caso muy utilizado de paso negativo es la inversión completa de una lista:</p>
+                    <div class="code">
+                        <p>lista[: : -1] --> resulta <strong>[70, 60, 50, 40, 30, 20, 10]</strong> porque toma ambos
+                            limites extremos con paso -1</p>
+                    </div>
+
+
+
+
+
+                    <br>
+                    <br>
+                    <p>Última modificación: lunes, 5 de abril de 2021, 15:43</p>
+                    <hr>
+                    <div class="row next">
+                        <div class="col-md-5">
+                            <p>ACTIVIDAD ANTERIOR</p>
+                            <a href="python9-3.html">◄ Tuplas</a>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5">
+                            <p>ACTIVIDAD SIGUIENTE</p>
+                            <a href="python9-5.html">Listas con entendimiento o inteligencia ►</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- parte 3 -->
+            <aside class="col-md-3">
+                <div class="story">
+                    <p><span>Reliquias de la Muerte</span></p>
+                    <video src="./video/Reliquias de la muerte.mp4" autoplay="autoplay" controls="controls" loop="loop"
+                        muted="muted"></video>
+
+                    <p>Había una vez tres hermanos que viajaban por un camino sinuoso y solitario, al atardecer. De
+                        pronto los hermanos llegaron a un río demasiado traicionero para cruzarlo. Pero siendo diestros
+                        en el arte de la magia los tres hermanos solo usaron sus varitas para crear un puente. Sin
+                        embargo, antes de pasar, una figura encapuchada bloqueó su camino, era la muerte, y se sintió
+                        defraudada porque los viajeros normalmente se ahogaban en el río. Pero la muerte era astuta.
+                        Fingió felicitar a los tres hermanos por su magia y les dijo que se habían ganado un premio por
+                        ser lo bastante listos para evitarla. El mayor, pidió una varita más poderosa que cualquiera que
+                        existiera, y la muerte se la fabricó de un árbol de Sáuco que estaba cerca . El segundo hermano
+                        decidió que quería humillar a la muerte aún más, pidió el poder de traer a seres amados desde la
+                        tumba. Así la muerte tomo una piedra del río y se la entregó. Finalmente, la muerte giró hacia
+                        el tercer hermano, un hombre humilde. Él pidió algo que le permitiera irse de ese lugar evitando
+                        que la muerte lo siguiera, la muerte de mala gana, le dio su propio manto de invisibilidad.
+
+                        El primer hermano viajo a un poblado distante y con la varita de Sáuco en la mano mató a un mago
+                        con quien una vez había peleado. Ebrio con el poder que le había dado la varita, presumió ser
+                        invencible. Pero esa noche, otro mago le robó la varita y le cortó el cuello de lado a lado. Y
+                        la muerte reclamó al primer hermano.
+
+
+                        Mientras, el segundo hermano fue a su hogar donde tomó la piedra y la giró tres veces en su
+                        mano. Para su deleite, la mujer con la que había querido casarse antes de su repentina muerte,
+                        apareció frente a él, pero pronto se volvió triste y fría, pues ya no pertenecía al mundo de los
+                        mortales. Llevado a la locura por su tristeza, el segundo hermano se quitó la vida para estar
+                        con ella, y la muerte se llevó al segundo hermano.
+                        Al tercer hermano la muerte lo buscó por muchos años, pero nunca pudo encontrarlo, solo cuando
+                        llegó a una edad muy avanzada, el hermano más joven se quitó el manto de invisibilidad y se lo
+                        dio a su hijo. Recibió a la muerte como a una vieja amiga y fue con ella con gusto, dejando esta
+                        vida como iguales.
+
+                    </p>
+                </div>
+                <div class="hot">
+                    <a href="#">
+                        <span class="btn btn-warning">Hot en Busqueda</span>
+                        <h4 class="text-primary">Elecciones 2021: el PRO pidió más urnas y mesas de votación para los
+                            argentinos en el
+                            exterior.
+                        </h4>
+                        <p>El PRO, uno de los partidos que integra la alianza de Juntos por el Cambio, hizo hoy un
+                            pedido en
+                            la justicia electoral para que en las elecciones del próximo 14 de noviembre haya más urnas
+                            y
+                            mesas de votación en los consultados y embajadas donde votan los argentinos que residen en
+                            le
+                            exterior. Un planteo similar fue rechazado hace un mes pero ahora el PRO acercó propuestas
+                            para
+                            evitar las demoras que se registraron en las elecciones de 2019.
+
+                            Según la nota a la que accedió Infobae, creció el padrón respecto de las elecciones
+                            presidenciales de 2019 -los residentes en el exterior no votan en las PASO- pero no se
+                            incrementaron la cantidad de mesas ni las urnas disponibles, lo que puede hacer el proceso
+                            el
+                            día de los comicios se haga más lento y haya gente que desista de ir a votar. A eso suma que
+                            en
+                            esta elección se aplican protocolos sanitarios por la pandemia del coronavirus.</p>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <h2>By.Zhihao Guo Copyright © 2021 Todos los derechos reservados</h2>
+                    <div class="animation">
+                        <div class="bear"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

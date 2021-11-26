@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEMPRE NOTICIA</title>
+    <meta name="keywords"
+        content="SIEMPRE NOTICIA,python,Python,tutorial,clase de programacion,estudiar online,recursos de programacion,aprender">
+    <meta name="description"
+        content="Siempre noticia,clases de python,clases de programacion,clase gratuito,en 12 clases aprendes de programar en python,aprende virtual,aprende online,programacion,PROGRAMACION,Programacion,mejor tutorial de python,python tutorial en espanol">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/economia.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- parte 1 -->
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="" class="hidden-xs">
+                        <span class="visible-xs">SIEMPRE NOTICIA</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="clasesvirtuales.html" class="glyphicon glyphicon-fire">
+                                Clases</a></li>
+                        <li><a href="politica.html" class="glyphicon glyphicon-hand-up">
+                                Política</a></li>
+                        <li><a href="sociedad.html" class="glyphicon glyphicon-pawn"> Sociedad</a>
+                        </li>
+                        <li><a href="economia.html" class="glyphicon glyphicon-globe"> Economía</a>
+                        </li>
+                        <li><a href="tecno.html" class="glyphicon glyphicon-wrench"> Tecno</a></li>
+                    </ul>
+                </div>
+                <script>
+                    window.addEventListener('load', function () {
+                        var nav = document.querySelector('.nav');
+                        var lis = nav.children[0].children;
+
+                        var arry = ['glyphicon glyphicon-fire', 'glyphicon glyphicon-hand-up', 'glyphicon glyphicon-pawn', 'glyphicon glyphicon-globe', 'glyphicon glyphicon-wrench'];
+                        window.addEventListener('resize', function () {
+
+                            if (window.innerWidth < 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = '';
+                                }
+                            }
+                            if (window.innerWidth > 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = arry[i];
+
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <div class="time">
+                    <span class="hour">12</span>
+                    <span class="minute">25</span>
+                    <span class="second">33</span>
+                    <span class="frase">Si si, el timepo vale oro!!!!!</span>
+                </div>
+                <a href="javascript:;" class="public-coto hidden-xs hidden-sm hidden-md"><img src="./images/coto.gif"
+                        alt=""></a>
+                <script>
+                    var hour = document.querySelector('.hour');
+                    var minute = document.querySelector('.minute');
+                    var second = document.querySelector('.second');
+                    var frase = document.querySelector('.frase');
+                    var time = hour.parentNode;
+                    time.addEventListener('mouseover', function () {
+                        frase.style.display = 'block';
+                    });
+                    time.addEventListener('mouseout', function () {
+                        frase.style.display = 'none';
+                    });
+                    getTime();
+                    setInterval(getTime, 1000);
+                    function getTime() {
+                        var times = new Date();
+                        var h = times.getHours();
+                        h = h >= 10 ? h : '0' + h;
+                        var m = times.getMinutes();
+                        m = m >= 10 ? m : '0' + m;
+                        var s = times.getSeconds();
+                        s = s >= 10 ? s : '0' + s;
+                        hour.innerHTML = h;
+                        minute.innerHTML = m;
+                        second.innerHTML = s;
+                    }
+                </script>
+            </header>
+            <!-- parte 2 -->
+            <article class="col-md-7">
+                <div class="data-new">
+                    <h1>FMI: el Gobierno le pone presión al organismo para cerrar un acuerdo con el envío del plan
+                        plurianual al Congreso</h1>
+                    <h3>El Poder Ejecutivo tenía tomada la decisión de acelerar hacia un acuerdo con el Fondo antes de
+                        los comicios legislativos. En el oficialismo no descartan retomar una última ronda de
+                        conversaciones con el staff antes de presentar el proyecto al Congreso.</h3>
+                    <div class="byline clearfix">
+                        <div class="photo">
+                            <img src="./upload/autor.png" alt="">
+                        </div>
+                        <div class="title">
+                            <p>
+                                Por <strong>Mariano Boettner</strong><br>
+                                15 de Noviembre de 2021
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <img src="./upload/economia.jpg" alt="">
+                    <p class="text-muted">El Poder Ejecutivo tenía tomada la decisión de acelerar hacia un acuerdo con
+                        el Fondo antes de los comicios legislativos</p>
+                    <div class="data-new-content">
+                        <p>El fin del proceso electoral aceleró una decisión que ya estaba tomada dentro del Gobierno:
+                            dar <strong>un giro en las negociaciones con el Fondo Monetario y destrabar el acuerdo
+                                primero con
+                                la búsqueda de una ley que dé “impulso” político</strong> a los números que el Poder
+                            Ejecutivo cruza
+                            con los técnicos del organismo. De esta forma, le pasará la pelota de la decisión al FMI con
+                            la premisa de que esas serán las proyecciones macroeconómicas que propondrá el país y con
+                            las que se plantará en futuras discusiones con el equipo técnico del organismo.</p><br>
+                        <p>La intención de avanzar hacia un programa con el Fondo de manera más decidida tras el paso
+                            por las urnas <strong>ya rondaba los círculos de decisión más altos del Frente de Todos
+                                desde antes
+                                del resultado del domingo</strong>, más allá de que el mensaje presidencial en que
+                            <strong>Alberto Fernández</strong>
+                            anticipó el envío del proyecto fue difundido minutos después de que se conocieran los
+                            primeros datos oficiales de las legislativas.
+                        </p><br>
+                        <div class="subtitle-1">
+                            El Gobierno quiere pasarle la pelota de la decisión al FMI con la premisa de que esas serán
+                            las proyecciones macroeconómicas que propondrá el país y con las que se plantará en futuras
+                            discusiones con el equipo técnico del organismo
+
+                        </div>
+                        <p>Esto dejó entrever, además, que para la coalición de gobierno plantear la necesidad de un
+                            acercamiento al Fondo de una manera como la que se anunció este domingo en época de campaña
+                            era inconveniente políticamente. Superada la instancia electoral, entonces, <strong>el
+                                Gobierno
+                                terminará de darle forma al proyecto de ley que incluirá estimaciones económicas para
+                                los
+                                próximos años</strong>.</p><br>
+
+                        <p>El anuncio presidencial abrió una ventana de dos semanas en la que, según especularon desde
+                            un despacho oficial ante la consulta de <strong>Infobae</strong>, podrían retomarse los
+                            contactos a nivel
+                            técnico con el staff del Fondo Monetario para <strong>afinar distancias sobre las
+                                proyecciones macro
+                                que estarán incluidas en el programa financiero</strong> que reemplace al Stand-By
+                            firmado en 2018,
+                            por un nuevo Extended Fund Facilities (EFF) que reestructurará la deuda a un plazo de diez
+                            años.</p><br>
+                        <img src="./upload/economia1.webp" alt="">
+                        <p class="text-muted text-small">El Gobierno había aprobado en el Congreso un proyecto de ley
+                            para que cualquier programa con el FMI tenga que tener aval parlamentario</p>
+
+
+                        <p>
+                            De todas formas, según aclararan desde el Poder Ejecutivo, si en esos 15 días antes de que
+                            el Gobierno presente ante el Congreso el proyecto de ley que Alberto Fernández bautizó
+                            “programa económico plurianual para el desarrollo sustentable”, el Ministerio de Economía no
+                            llegara a un acuerdo con el staff técnico del Fondo, <strong>el oficialismo buscará
+                                igualmente
+                                aprobar esos números en el parlamento.</strong>
+
+                            La lógica de esa estrategia sería pasarle la presión al Fondo Monetario, al que en las
+                            últimas semanas el propio Fernández y también Guzmán criticaron abiertamente por la demora
+                            en la resolución de las negociaciones. <strong>“¿Con qué autoridad el FMI después puede
+                                rechazar un
+                                programa económico plurianual aprobado en el Congreso?”</strong>, se preguntaban desde
+                            un despacho
+                            oficial este lunes por la mañana.
+                        </p><br>
+                        <div class="subtitle-2">
+                            El anuncio presidencial abrió una ventana de dos semanas en la que podrían retomarse los
+                            contactos a nivel técnico con el staff del Fondo Monetario
+
+                        </div>
+
+                        <p>Un programa plurianual incluye típicamente estimaciones de variables críticas que forman
+                            parte de las deliberaciones con el FMI. Entre ellas, <strong>el sendero de reducción del
+                                déficit
+                                fiscal de los próximos años, cómo será la velocidad de recorte en las tasas de
+                                inflación,
+                                proyecciones de variaciación del PBI, nivel de reservas en el Banco Central y, en ese
+                                sentido, cómo deberían ser de acuerdo a este último factor, los controles de
+                                capitales</strong>.
+                            Habrá que ver cuáles de todas esas variables terminará por incluir el Poder Ejecutivo para
+                            su discusión parlamentaria.</p><br>
+                        <p>Los números plurianuales son decisivos para la puesta en marcha de un programa financiero
+                            como el que negocia la Argentina, que tiene un plazo de diez años y que incluiría un plazo
+                            de gracia de tres años antes de que el país comenzara a repagar el préstamo de 2018. Eso
+                            sucede <strong>porque el sendero de pagos que saldrá de las negociaciones estarán influidos,
+                                por
+                                ejemplo, por el nivel de reservas internacionales en el Banco Central y por el
+                                déficit</strong>, es
+                            decir, por las necesidades de financiamiento que tenga el Estado.</p><br>
+                        <img src="./upload/economia2.jpg" alt="">
+                        <p class="text-muted text-small">Guzmán había tenido una última reunión técnica con el FMI en
+                            Roma.</p>
+                        <br>
+                        <p>
+                            En rigor, no es la primera vez que el Gobierno nacional habla sobre la presentación de
+                            proyecciones económicas con un horizonte de mediano plazo. <strong> A fines de 2020, por lo
+                                pronto,
+                                el ministro Guzmán ya hablaba en público sobre la elaboración de un programa plurianual
+                                en
+                                el que las estimaciones económicas para los próximos años</strong> sean una suerte de
+                            “hoja de ruta”
+                            de gestión de la política económica. Pero la demora en las conversaciones con el Fondo
+                            Monetario lo aplazaron hasta que este domingo Alberto Fernández lo puso en agenda
+                            nuevamente.
+                        </p><br>
+                        <p>Incluso en los meses de elaboración del Presupuesto 2022 ya ingresado pero sin tratamiento
+                            aún en el Congreso la idea de proyectar algunas variables macro hacia los próximos años
+                            también formaba parte de las posibilidades. Semanas antes de la puntada final al presupuesto
+                            algunos funcionarios todavía esperaban que esas estimaciones estuvieran incluidas en la ley
+                            de leyes, lo que tampoco sucedió.</p>
+
+
+                        <p><br>
+                        <div class="subtitle-3">
+                            Un programa plurianual incluye típicamente estimaciones de reducción del déficit fiscal,
+                            inflación, variaciación del PBI, nivel de reservas en el Banco Central y, en ese sentido,
+                            cómo deberían ser de acuerdo a este último factor, los controles de capitales
+
+                        </div>
+                        <p>Los números del proyecto de ingresos y gastos que aún no tuvo debate en la Cámara de
+                            Diputados, afirman cerca de Guzmán, <strong>“son los mismos que hubiéramos presentado si no
+                                estuviéramos en negociación con el FMI”</strong>, con lo que buscan sacarle al
+                            Presupuesto cualquier
+                            pátina de injerencia del staff, algo que debe leerse en clave de las tensiones internas en
+                            el Frente de Todos que recrudecieron tras las PASO de septiembre.</p><br>
+                        <p>Sin ir más lejos, este lunes se cumplen dos meses de la presentación del Presupuesto 2022 en
+                            el Congreso sin que haya habido aún ninguna reunión de comisiones para comenzar su debate.
+                            El anuncio presidencial del proyecto de metas plurianuales no modificó los planes de las
+                            autoridades de la Cámara baja, que preside <strong>Sergio Massa</strong> y que esperan entre
+                            hoy y este
+                            martes definir cómo comenzaría el tratamiento en comisiones o, al menos, con reuniones
+                            preliminares con funcionarios de Economía.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- parte 3 -->
+            <aside class="col-md-3">
+                <div class="story">
+                    <p><span>Reliquias de la Muerte</span></p>
+                    <video src="./video/Reliquias de la muerte.mp4" autoplay="autoplay" controls="controls" loop="loop"
+                        muted="muted"></video>
+
+                    <p>Había una vez tres hermanos que viajaban por un camino sinuoso y solitario, al atardecer. De
+                        pronto los hermanos llegaron a un río demasiado traicionero para cruzarlo. Pero siendo diestros
+                        en el arte de la magia los tres hermanos solo usaron sus varitas para crear un puente. Sin
+                        embargo, antes de pasar, una figura encapuchada bloqueó su camino, era la muerte, y se sintió
+                        defraudada porque los viajeros normalmente se ahogaban en el río. Pero la muerte era astuta.
+                        Fingió felicitar a los tres hermanos por su magia y les dijo que se habían ganado un premio por
+                        ser lo bastante listos para evitarla. El mayor, pidió una varita más poderosa que cualquiera que
+                        existiera, y la muerte se la fabricó de un árbol de Sáuco que estaba cerca . El segundo hermano
+                        decidió que quería humillar a la muerte aún más, pidió el poder de traer a seres amados desde la
+                        tumba. Así la muerte tomo una piedra del río y se la entregó. Finalmente, la muerte giró hacia
+                        el tercer hermano, un hombre humilde. Él pidió algo que le permitiera irse de ese lugar evitando
+                        que la muerte lo siguiera, la muerte de mala gana, le dio su propio manto de invisibilidad.
+
+                        El primer hermano viajo a un poblado distante y con la varita de Sáuco en la mano mató a un mago
+                        con quien una vez había peleado. Ebrio con el poder que le había dado la varita, presumió ser
+                        invencible. Pero esa noche, otro mago le robó la varita y le cortó el cuello de lado a lado. Y
+                        la muerte reclamó al primer hermano.
+
+
+                        Mientras, el segundo hermano fue a su hogar donde tomó la piedra y la giró tres veces en su
+                        mano. Para su deleite, la mujer con la que había querido casarse antes de su repentina muerte,
+                        apareció frente a él, pero pronto se volvió triste y fría, pues ya no pertenecía al mundo de los
+                        mortales. Llevado a la locura por su tristeza, el segundo hermano se quitó la vida para estar
+                        con ella, y la muerte se llevó al segundo hermano.
+                        Al tercer hermano la muerte lo buscó por muchos años, pero nunca pudo encontrarlo, solo cuando
+                        llegó a una edad muy avanzada, el hermano más joven se quitó el manto de invisibilidad y se lo
+                        dio a su hijo. Recibió a la muerte como a una vieja amiga y fue con ella con gusto, dejando esta
+                        vida como iguales.
+
+                    </p>
+                </div>
+                <div class="hot">
+                    <a href="#">
+                        <span class="btn btn-warning">Hot en Busqueda</span>
+                        <h4 class="text-primary">Elecciones 2021: el PRO pidió más urnas y mesas de votación para los
+                            argentinos en el
+                            exterior.
+                        </h4>
+                        <p>El PRO, uno de los partidos que integra la alianza de Juntos por el Cambio, hizo hoy un
+                            pedido en
+                            la justicia electoral para que en las elecciones del próximo 14 de noviembre haya más urnas
+                            y
+                            mesas de votación en los consultados y embajadas donde votan los argentinos que residen en
+                            le
+                            exterior. Un planteo similar fue rechazado hace un mes pero ahora el PRO acercó propuestas
+                            para
+                            evitar las demoras que se registraron en las elecciones de 2019.
+
+                            Según la nota a la que accedió Infobae, creció el padrón respecto de las elecciones
+                            presidenciales de 2019 -los residentes en el exterior no votan en las PASO- pero no se
+                            incrementaron la cantidad de mesas ni las urnas disponibles, lo que puede hacer el proceso
+                            el
+                            día de los comicios se haga más lento y haya gente que desista de ir a votar. A eso suma que
+                            en
+                            esta elección se aplican protocolos sanitarios por la pandemia del coronavirus.</p>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <h2>By.Zhihao Guo Copyright © 2021 Todos los derechos reservados</h2>
+                    <div class="animation">
+                        <div class="bear"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

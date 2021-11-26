@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEMPRE NOTICIA</title>
+    <meta name="keywords"
+        content="SIEMPRE NOTICIA,python,Python,tutorial,clase de programacion,estudiar online,recursos de programacion,aprender">
+    <meta name="description"
+        content="Siempre noticia,clases de python,clases de programacion,clase gratuito,en 12 clases aprendes de programar en python,aprende virtual,aprende online,programacion,PROGRAMACION,Programacion,mejor tutorial de python,python tutorial en espanol">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/python.css">
+    <link rel="stylesheet" href="./css/python5all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- parte 1 -->
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="" class="hidden-xs">
+                        <span class="visible-xs">SIEMPRE NOTICIA</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="clasesvirtuales.html" class="glyphicon glyphicon-fire">
+                                Clases</a></li>
+                        <li><a href="politica.html" class="glyphicon glyphicon-hand-up">
+                                Política</a></li>
+                        <li><a href="sociedad.html" class="glyphicon glyphicon-pawn"> Sociedad</a>
+                        </li>
+                        <li><a href="economia.html" class="glyphicon glyphicon-globe"> Economía</a>
+                        </li>
+                        <li><a href="tecno.html" class="glyphicon glyphicon-wrench"> Tecno</a></li>
+                    </ul>
+                </div>
+                <script>
+                    window.addEventListener('load', function () {
+                        var nav = document.querySelector('.nav');
+                        var lis = nav.children[0].children;
+
+                        var arry = ['glyphicon glyphicon-fire', 'glyphicon glyphicon-hand-up', 'glyphicon glyphicon-pawn', 'glyphicon glyphicon-globe', 'glyphicon glyphicon-wrench'];
+                        window.addEventListener('resize', function () {
+
+                            if (window.innerWidth < 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = '';
+                                }
+                            }
+                            if (window.innerWidth > 500) {
+                                for (var i = 0; i < lis.length; i++) {
+                                    lis[i].children[0].className = arry[i];
+
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <div class="time">
+                    <span class="hour">12</span>
+                    <span class="minute">25</span>
+                    <span class="second">33</span>
+                    <span class="frase">Si si, el timepo vale oro!!!!!</span>
+                </div>
+                <a href="javascript:;" class="public-coto hidden-xs hidden-sm hidden-md"><img src="./images/coto.gif"
+                        alt=""></a>
+                <script>
+                    var hour = document.querySelector('.hour');
+                    var minute = document.querySelector('.minute');
+                    var second = document.querySelector('.second');
+                    var frase = document.querySelector('.frase');
+                    var time = hour.parentNode;
+                    time.addEventListener('mouseover', function () {
+                        frase.style.display = 'block';
+                    });
+                    time.addEventListener('mouseout', function () {
+                        frase.style.display = 'none';
+                    });
+                    getTime();
+                    setInterval(getTime, 1000);
+                    function getTime() {
+                        var times = new Date();
+                        var h = times.getHours();
+                        h = h >= 10 ? h : '0' + h;
+                        var m = times.getMinutes();
+                        m = m >= 10 ? m : '0' + m;
+                        var s = times.getSeconds();
+                        s = s >= 10 ? s : '0' + s;
+                        hour.innerHTML = h;
+                        minute.innerHTML = m;
+                        second.innerHTML = s;
+                    }
+                </script>
+            </header>
+            <!-- parte 2 -->
+            <article class="col-md-7">
+                <div class="cursologo">
+                    <a href="clasesvirtuales.html"><img src="./images/APV_logo2.png" alt=""></a>
+                </div>
+                <ul class="row">
+                    <li><a href="python.html">1</a></li>
+                    <li><a href="python2.html">2</a></li>
+                    <li><a href="python3.html">3</a></li>
+                    <li><a href="python4.html">4</a></li>
+                    <li><a href="python5.html">5</a></li>
+                    <li><a href="python6.html">6</a></li>
+                    <li><a href="python7.html">7</a></li>
+                    <li><a href="python8.html">8</a></li>
+                    <li><a href="python9.html">9</a></li>
+                    <li><a href="python10.html">10</a></li>
+                    <li><a href="python11.html">11</a></li>
+                    <li><a href="python12.html">12</a></li>
+                </ul>
+
+                <div class="content">
+                    <h1>Clase # 5</h1>
+                    <hr>
+                    <h1>Funciones del usuario</h1>
+                    <h3>Definición</h3>
+                    <p>Una de las características mas poderosas de los lenguajes de programación es la posibilidad de
+                        «extender» sus funcionalidades creando nuestras propias funciones a medida.</p>
+                    <br>
+                    <p>Python permite crear nuevas funciones, agruparlas en módulos personalizados y hacer un uso muy
+                        avanzado de las mismas.</p>
+                    <br>
+                    <p>Antes de pasar a la sintaxis, recordemos que crear nuestras propias funciones tiene muchas
+                        ventajas:</p>
+                    <ul class="list-circle">
+                        <li>
+                            <p>Re-utilización de código</p>
+                        </li>
+                        <li>
+                            <p>Encapsulado de código</p>
+                        </li>
+                        <li>
+                            <p>Código mas legible y sencillo</p>
+                        </li>
+                        <li>
+                            <p>Mejoras en el seguimiento de errores</p>
+                        </li>
+                        <li>
+                            <p>Correcciones y actualización de código centralizadas</p>
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Para definir una <strong>nueva función</strong>, escribimos:</p>
+                    <br>
+                    <div class="code">
+                        <p><strong>def</strong> nombre_funcion(argumentos de entrada) :</p>
+                        <p>bloque de instrucciones de la función</p>
+                        <p><strong>return</strong> (valor de retorno)</p>
+                    </div>
+                    <br>
+                    <p>
+                        Los argumentos de entrada son opcionales, al igual que la linea del valor de retorno. <br>
+                        En Python las funciones deben definirse antes de poder ser llamadas.
+                    </p>
+                    <br>
+                    <p>Ejemplo:</p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-1.png" alt="">
+                    </div>
+                    <br>
+                    <p>
+                        Arriba podemos ver la definición de una función que recibe dos argumentos numéricos y que
+                        calcula y retorna el promedio de ambos números. <br><br>
+
+                        Las variables usadas como argumentos, valores de retorno y cualquier otra variable de uso
+                        «interno» de la función no son accesibles desde el exterior, es decir que son variables
+                        «locales» de la función.
+                    </p>
+                    <br>
+                    <h3>Paso de parámetros de funciones en Python</h3>
+                    <p>
+                        En la mayoría de los lenguajes de programación, cuando se hace una llamada a una función, se le
+                        deben pasar la <strong>misma cantidad de parámetros</strong> y en <strong>el mismo
+                            orden</strong> con la que fue definida. <br><br>
+                        Es decir, que si pasamos una cantidad diferente de parámetros o si los pasamos en un orden
+                        diferente, se van a producir errores o malas interpretaciones de los datos.
+                    </p>
+                    <br>
+                    <p>Ejemplo de error por el paso de mas parámetros que los definidos:</p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-2.png" alt="">
+                    </div>
+                    <br>
+                    <p>Python en este sentido es bastante flexible y permite una variedad de posibilidades sobre los
+                        parámetros.</p>
+                    <br>
+                    <h3>Valores predeterminados</h3>
+                    <p>Cuando un parámetro de la función se puede predeterminar y se le da un valor por defecto, es
+                        posible omitirlo en forma opcional cuando se llama a la función.
+                        Esto se logra asignándole un valor predeterminado a cada parámetro que deseamos se pueda omitir
+                        durante la llamada y cuyo valor sea «asumido».</p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-3.png" alt="">
+                    </div>
+                    <br>
+                    <p>
+                        En la linea 4 la función se llama con 2 parámetros. <br>
+                        en la linea 5 la función se llama con 1 parámetro, pero este se asume con el valor 2 por la
+                        definición.
+                    </p>
+                    <br>
+                    <h3>Numero variable de parámetros</h3>
+                    <p>
+                        Cuando no conocemos la cantidad de parámetros que son necesarios pasarle a la función, estos se
+                        pueden pasar como si fueran un lista. <br>
+                        Esto se logra declarando un parámetro con el nombre antepuesto por un asterisco. <br>
+                        Ese parámetro adopta la lista de todos los parámetros que no se declararon formalmente, o de la
+                        totalidad de los parámetros si no se formaliza ninguno.
+                    </p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-4.png" alt="">
+                    </div>
+                    <br>
+                    <p>
+                        En la funcion1 hay 2 parámetros formales declarados, entonces la lista args asume el resto de
+                        los valores. <br>
+                        En la funcion2 no hay parámetros formales declarados, entonces la lista args asume la totalidad
+                        de los valores.
+                    </p>
+                    <br>
+                    <h3>Paso de parámetros como clave-valor</h3>
+                    <p>Es posible durante la llamada a una función, nombrar el parámetro que se esta pasando junto con
+                        su valor (lo que se podría llamar «par clave-valor»)
+                        Haciendo esto podemos alterar el orden de los parámetros que están declarados formalmente en la
+                        función.</p>
+
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-5.png" alt="">
+                    </div>
+                    <br>
+                    <p>
+                        En la llamada a la función de la linea 6, los parámetros se pasan en el orden declarado para que
+                        puedan ser reconocidos. <br>
+                        En la llamada a la función de la linea 7, los parámetros se pueden pasar en cualquier orden,
+                        porque son reconocidos por su nombre.
+                    </p>
+                    <br>
+                    <h3>Paso de parámetros informales como lista de pares clave-valor</h3>
+                    <p>
+                        Así como podemos capturar todos los parámetros no declarados formalmente por la función, también
+                        podemos capturar todos los parámetros no declarados (informales) que se pasan como pares
+                        clave-valor desde la llamada. <br>
+                        Esto se configura anteponiendo 2 asteriscos al nombre del parámetro de captura.
+                    </p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-6.png" alt="">
+                    </div>
+                    <br>
+                    <p>
+                        En ambas llamadas se puede observar que los 3 primeros argumentos son formales, y que el 3º
+                        tiene un valor predeterminado.
+                        También vemos que <strong>args</strong> captura todos los argumentos informales que no tienen
+                        nombre.
+                        Finalmente se puede ver que <strong>kvargs</strong> captura todos los argumentos informales que
+                        se pasan con
+                        nombre.
+                    </p>
+                    <br>
+                    <h3>La funciones como valores</h3>
+                    <p>
+                        La funciones pueden ser asignadas a variables tal como si fueran valores corrientes. <br>
+                        Muchas veces esto se usa como un «alias» para el nombre de la función
+                    </p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-7.png" alt="">
+                    </div>
+                    <br>
+                    <p>En el ejemplo de arriba, <strong>promedio</strong> es un «alias» de la función formal
+                        <strong>media</strong>
+                    </p>
+                    <br>
+                    <p>Esta posibilidad de tratar una función como un valor es muy útil para pasar funciones como
+                        parámetros en las llamadas a otras funciones.</p>
+                    <div class="pic">
+                        <img src="./pythonimg/clase5-1-8.png" alt="">
+                    </div>
+                    <br>
+                    <p>
+                        La función <strong>calculo</strong> tiene un parámetro <strong>operacion</strong> que se
+                        transforma en alias de otras funciones
+                        que le pasemos como argumento durante la llamada. <br>
+                        En la linea 10 le pasamos <strong>suma</strong>, entonces <strong>calculo</strong> retorna un
+                        valor llamando a la función <strong>suma</strong>
+                        mediante su alias <strong>operacion</strong>. <br>
+                        Lo mismo pasa en la linea 11, salvo que en este caso <strong>operacion</strong> es alias de la
+                        función <strong>resta</strong>.
+                    </p>
+
+
+                    <br>
+                    <br>
+                    <p>Última modificación: lunes, 29 de marzo de 2021, 23:08</p>
+
+
+                    <hr>
+                    <div class="row next">
+                        <div class="col-md-4">
+                            <p>ACTIVIDAD ANTERIOR</p>
+                            <a href="python5.html">◄ Menu clase#5</a>
+                        </div>
+                        <div class="col-md-3"></div>
+                        <div class="col-md-5">
+                            <p>ACTIVIDAD SIGUIENTE</p>
+                            <a href="pythonejercicio5-1.html">Ejercicio #05-01 ►</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- parte 3 -->
+            <aside class="col-md-3">
+                <div class="story">
+                    <p><span>Reliquias de la Muerte</span></p>
+                    <video src="./video/Reliquias de la muerte.mp4" autoplay="autoplay" controls="controls" loop="loop"
+                        muted="muted"></video>
+
+                    <p>Había una vez tres hermanos que viajaban por un camino sinuoso y solitario, al atardecer. De
+                        pronto los hermanos llegaron a un río demasiado traicionero para cruzarlo. Pero siendo diestros
+                        en el arte de la magia los tres hermanos solo usaron sus varitas para crear un puente. Sin
+                        embargo, antes de pasar, una figura encapuchada bloqueó su camino, era la muerte, y se sintió
+                        defraudada porque los viajeros normalmente se ahogaban en el río. Pero la muerte era astuta.
+                        Fingió felicitar a los tres hermanos por su magia y les dijo que se habían ganado un premio por
+                        ser lo bastante listos para evitarla. El mayor, pidió una varita más poderosa que cualquiera que
+                        existiera, y la muerte se la fabricó de un árbol de Sáuco que estaba cerca . El segundo hermano
+                        decidió que quería humillar a la muerte aún más, pidió el poder de traer a seres amados desde la
+                        tumba. Así la muerte tomo una piedra del río y se la entregó. Finalmente, la muerte giró hacia
+                        el tercer hermano, un hombre humilde. Él pidió algo que le permitiera irse de ese lugar evitando
+                        que la muerte lo siguiera, la muerte de mala gana, le dio su propio manto de invisibilidad.
+
+                        El primer hermano viajo a un poblado distante y con la varita de Sáuco en la mano mató a un mago
+                        con quien una vez había peleado. Ebrio con el poder que le había dado la varita, presumió ser
+                        invencible. Pero esa noche, otro mago le robó la varita y le cortó el cuello de lado a lado. Y
+                        la muerte reclamó al primer hermano.
+
+
+                        Mientras, el segundo hermano fue a su hogar donde tomó la piedra y la giró tres veces en su
+                        mano. Para su deleite, la mujer con la que había querido casarse antes de su repentina muerte,
+                        apareció frente a él, pero pronto se volvió triste y fría, pues ya no pertenecía al mundo de los
+                        mortales. Llevado a la locura por su tristeza, el segundo hermano se quitó la vida para estar
+                        con ella, y la muerte se llevó al segundo hermano.
+                        Al tercer hermano la muerte lo buscó por muchos años, pero nunca pudo encontrarlo, solo cuando
+                        llegó a una edad muy avanzada, el hermano más joven se quitó el manto de invisibilidad y se lo
+                        dio a su hijo. Recibió a la muerte como a una vieja amiga y fue con ella con gusto, dejando esta
+                        vida como iguales.
+
+                    </p>
+                </div>
+                <div class="hot">
+                    <a href="#">
+                        <span class="btn btn-warning">Hot en Busqueda</span>
+                        <h4 class="text-primary">Elecciones 2021: el PRO pidió más urnas y mesas de votación para los
+                            argentinos en el
+                            exterior.
+                        </h4>
+                        <p>El PRO, uno de los partidos que integra la alianza de Juntos por el Cambio, hizo hoy un
+                            pedido en
+                            la justicia electoral para que en las elecciones del próximo 14 de noviembre haya más urnas
+                            y
+                            mesas de votación en los consultados y embajadas donde votan los argentinos que residen en
+                            le
+                            exterior. Un planteo similar fue rechazado hace un mes pero ahora el PRO acercó propuestas
+                            para
+                            evitar las demoras que se registraron en las elecciones de 2019.
+
+                            Según la nota a la que accedió Infobae, creció el padrón respecto de las elecciones
+                            presidenciales de 2019 -los residentes en el exterior no votan en las PASO- pero no se
+                            incrementaron la cantidad de mesas ni las urnas disponibles, lo que puede hacer el proceso
+                            el
+                            día de los comicios se haga más lento y haya gente que desista de ir a votar. A eso suma que
+                            en
+                            esta elección se aplican protocolos sanitarios por la pandemia del coronavirus.</p>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <h2>By.Zhihao Guo Copyright © 2021 Todos los derechos reservados</h2>
+                    <div class="animation">
+                        <div class="bear"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
