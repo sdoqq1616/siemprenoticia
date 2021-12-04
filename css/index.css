@@ -122,10 +122,22 @@ header{
     border:1px solid #eee;
     border-radius: 5px;
     padding: 5px;
+    
 }
+
+.ad .card .imgbox{
+    width: 186px;
+    overflow: hidden;
+}
+
 
 .ad .card img{
     width: 100%;
+    transition: transform .6s;
+}
+
+.ad .card img:hover{
+    transform: scale(1.1);
 }
 
 
@@ -157,6 +169,7 @@ header{
     display: block;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .news li:nth-child(1){
@@ -171,6 +184,13 @@ header{
 .news li a img{
     width: 100%;
     height: 100%;
+    transition: transform .6s;
+}
+
+
+
+.news li a img:hover{
+    transform: scale(1.1);
 }
 
 .news li a p{
@@ -189,10 +209,34 @@ header{
 
 
 /* banner */
-.carousel-inner{
+.focus{
     position: relative;
+    width: 100%;
+    height: 455px;
+    background-color: purple;
+    overflow:hidden;
 }
-.carousel-inner p{
+
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700%;
+}
+
+.focus ul li {
+    position: relative;
+    float: left;
+    height: 455px;
+}
+
+.focus ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+.focus ul li p{
     position: absolute;
     width: 100%;
     height: 100px;
@@ -202,6 +246,54 @@ header{
     font-size: 30px;
     padding: 0 20px;
     background-color: rgba(0,0,0,.5);
+}
+
+.arrow-l,
+.arrow-r {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 18px;
+    z-index: 2;
+}
+
+.arrow-r {
+    right: 0;
+}
+
+.circle {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    /*background-color: #fff;*/
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    /*鼠标经过显示小手*/
+    cursor: pointer;
+}
+
+li::marker{
+    font-size: 0;
+}
+
+.current {
+    background-color: #fff;
 }
 
 
